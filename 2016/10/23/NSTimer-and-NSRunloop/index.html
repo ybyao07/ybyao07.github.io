@@ -11,28 +11,16 @@
     
 
     
-    <meta name="description" content="NSTimer的使用和NSRunloop的关系NSTimer与UIScrollView(void)testTimer{
-NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-    NSLog(@&amp;quot;oneTimer&amp;quot;);
-}];
-NS">
+    <meta name="description" content="NSTimer的使用和NSRunloop的关系 将讲述NSTimer的几种启动方式即区别">
 <meta property="og:type" content="article">
 <meta property="og:title" content="姚永波的博客">
 <meta property="og:url" content="http://ybyao07.github.io/2016/10/23/NSTimer-and-NSRunloop/index.html">
 <meta property="og:site_name" content="姚永波的博客">
-<meta property="og:description" content="NSTimer的使用和NSRunloop的关系NSTimer与UIScrollView(void)testTimer{
-NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-    NSLog(@&amp;quot;oneTimer&amp;quot;);
-}];
-NS">
-<meta property="og:updated_time" content="2016-10-23T02:30:39.000Z">
+<meta property="og:description" content="NSTimer的使用和NSRunloop的关系 将讲述NSTimer的几种启动方式即区别">
+<meta property="og:updated_time" content="2016-10-23T02:34:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="姚永波的博客">
-<meta name="twitter:description" content="NSTimer的使用和NSRunloop的关系NSTimer与UIScrollView(void)testTimer{
-NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-    NSLog(@&amp;quot;oneTimer&amp;quot;);
-}];
-NS">
+<meta name="twitter:description" content="NSTimer的使用和NSRunloop的关系 将讲述NSTimer的几种启动方式即区别">
 
     
     <link rel="alternative" href="/atom.xml" title="姚永波的博客" type="application/atom+xml">
@@ -99,7 +87,7 @@ NS">
 		<a href="/about" title="ybyao07" target="_blank" itemprop="author">ybyao07</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-23T02:20:57.000Z" itemprop="datePublished"> 发表于 2016-10-23</time>
+    <time datetime="2016-10-23T02:34:45.000Z" itemprop="datePublished"> 发表于 2016-10-23</time>
     
   </p>
 </header>
@@ -112,7 +100,8 @@ NS">
 		
 		</div>
 		
-		<h1 id="NSTimer的使用和NSRunloop的关系"><a href="#NSTimer的使用和NSRunloop的关系" class="headerlink" title="NSTimer的使用和NSRunloop的关系"></a>NSTimer的使用和NSRunloop的关系</h1><h2 id="NSTimer与UIScrollView"><a href="#NSTimer与UIScrollView" class="headerlink" title="NSTimer与UIScrollView"></a>NSTimer与UIScrollView</h2><pre><code>(void)testTimer{
+		<h1 id="NSTimer的使用和NSRunloop的关系"><a href="#NSTimer的使用和NSRunloop的关系" class="headerlink" title="NSTimer的使用和NSRunloop的关系"></a>NSTimer的使用和NSRunloop的关系</h1><p> 将讲述NSTimer的几种启动方式即区别<br><a id="more"></a></p>
+<h2 id="NSTimer与UIScrollView"><a href="#NSTimer与UIScrollView" class="headerlink" title="NSTimer与UIScrollView"></a>NSTimer与UIScrollView</h2><pre><code>(void)testTimer{
 NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
     NSLog(@&quot;oneTimer&quot;);
 }];

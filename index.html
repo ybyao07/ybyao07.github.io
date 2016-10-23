@@ -85,46 +85,18 @@
 		<a href="/about" title="ybyao07" target="_blank" itemprop="author">ybyao07</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-23T02:20:57.000Z" itemprop="datePublished"> 发表于 2016-10-23</time>
+    <time datetime="2016-10-23T02:34:45.000Z" itemprop="datePublished"> 发表于 2016-10-23</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h1 id="NSTimer的使用和NSRunloop的关系"><a href="#NSTimer的使用和NSRunloop的关系" class="headerlink" title="NSTimer的使用和NSRunloop的关系"></a>NSTimer的使用和NSRunloop的关系</h1><h2 id="NSTimer与UIScrollView"><a href="#NSTimer与UIScrollView" class="headerlink" title="NSTimer与UIScrollView"></a>NSTimer与UIScrollView</h2><pre><code>(void)testTimer{
-NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-    NSLog(@&quot;oneTimer&quot;);
-}];
-NSRunLoop *currentLoop = [NSRunLoop currentRunLoop];
-NSRunLoop *theMainLoop = [NSRunLoop mainRunLoop];  //这里currentLoop等于theMainLoop
-[currentLoop  addTimer:timer forMode:NSRunLoopCommonModes];
-//也可以直接使用 scheduled的方法自动启动定时器，但是启动的模式默认为NSDefaultMode(NSRunloop中的默认模式）
-</code></pre><p>//    NSTimer <em>onetimer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer </em> _Nonnull timer) {<br>//        NSLog(@”oneTimer”);<br>//    }];<br>}</p>
-<h2 id="NSTimer在当前线程中运行"><a href="#NSTimer在当前线程中运行" class="headerlink" title="NSTimer在当前线程中运行"></a>NSTimer在当前线程中运行</h2><pre><code>//    NSTimer *onetimer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//        NSLog(@&quot;oneTimer&quot;);
-//    }];
-</code></pre><h2 id="NSTimer在另外一个线程中启动"><a href="#NSTimer在另外一个线程中启动" class="headerlink" title="NSTimer在另外一个线程中启动"></a>NSTimer在另外一个线程中启动</h2><pre><code> - (void)testAnotherThreadTimer
-{
-NSThread *newThread = [[NSThread alloc] initWithTarget:self selector:@selector(testThreadTimer) object:nil];
-[newThread start];
-}
-//在子线程中，只有将NSTimer加到NSRunLoop中才能使用
-- (void)testThreadTimer
-{
-NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-    NSLog(@&quot;in thread Timer&quot;);
-}];
-//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//        NSLog(@&quot;in thread Timer&quot;);
-//    }];
-NSRunLoop *currentLoop = [NSRunLoop currentRunLoop];
-[currentLoop  addTimer:timer forMode:NSRunLoopCommonModes];
-[currentLoop run];
-}
-</code></pre>
+        <h1 id="NSTimer的使用和NSRunloop的关系"><a href="#NSTimer的使用和NSRunloop的关系" class="headerlink" title="NSTimer的使用和NSRunloop的关系"></a>NSTimer的使用和NSRunloop的关系</h1><p> 将讲述NSTimer的几种启动方式即区别<br>
         
         
         <p class="article-more-link">
+          
+            <a href="/2016/10/23/NSTimer-and-NSRunloop/#more">Read More</a>
           
        </p>
     </div>
